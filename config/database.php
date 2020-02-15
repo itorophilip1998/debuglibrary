@@ -46,7 +46,7 @@ return [
         'mysql' => [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', 'dbfree.net4'),
+            'host' => env('DB_HOST', 'dbfree4.net'),
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE', 'debuglibrary'),
             'username' => env('DB_USERNAME', 'debuglibrary'),
