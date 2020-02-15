@@ -1,5 +1,13 @@
         /* Group 3 by Itoro*/
         
+        .color {
+            color: rgb(209, 207, 211)!important;
+        }
+        
+        .background {
+            background-color: indigo !important;
+        }
+        
         .regitrationcardheader,
         .navbar,
         .navbar-ul>li>a {

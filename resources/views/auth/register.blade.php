@@ -4,8 +4,8 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card shadow-lg">
-                <div class="card-header regitrationcardheader">{{ __('Register') }}</div>
+            <div class="card shadow-lg"> 
+                <div class="card-header regitrationcardheader">{{ __('Register') }} <i class="fa fa-book color float-right fa-2x" aria-hidden="true"></i></div>
 
                 <div class="card-body regitrationcardbody">
                     <form method="POST" action="{{ route('register') }}">
@@ -15,7 +15,7 @@
                             <label for="username" class="col-md-4 registertext col-form-label text-md-right">{{ __('Username') }} <span class="required">*</span></label>
 
                             <div class="col-md-6">
-                                <input id="username" type="text" class="rounder-1 form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus>
+                                <input id="username" placeholder="(e.g) peterparker" type="text" class="rounder-1 form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus>
 
                                 @error('username')
                                     <span class="registertext" role="alert">
@@ -29,7 +29,7 @@
                             <label for="email" class="col-md-4 registertext col-form-label text-md-right">{{ __('Email') }} <span class="required">*</span></label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="rounder-1 form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                <input id="email"  placeholder="(e.g) peterpaker@gmail.com" type="email" class="rounder-1 form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
                                 @error('email')
                                     <span class="registertext" role="alert">
@@ -67,9 +67,9 @@
                                     {{ __('Register') }}
                                 </button>  
                                 <br><br>
-                                <button type="submit" class="btn btn-dark col-12 mdbtn rounder-1 " style="display: none;">
+                                <a href="/login" class="btn btn-dark col-12 mdbtn rounder-1 " style="display: none;">
                                     {{ __('Login') }}
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </form>
