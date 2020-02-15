@@ -1,0 +1,53 @@
+        /* Group 3 by Itoro*/
+        
+        .regitrationcardheader,
+        .navbar,
+        .navbar-ul>li>a {
+            background-color: indigo !important;
+            color: whitesmoke !important;
+            opacity: 80%;
+        }
+        
+        .allbtn {
+            background-color: rgb(90, 14, 145) !important;
+            color: whitesmoke !important;
+            opacity: 80%;
+        }
+        
+        .registertext {
+            color: indigo !important;
+            font-size: 13px !important;
+        }
+        
+        .rounder-1 {
+            border-radius: 10px !important;
+        }
+        
+        .regitrationcardbody>form>.row>.col-md-6>input {
+            color: indigo !important;
+            box-shadow: 0 0 0 0.1px rgb(191, 184, 196)!important;
+        }
+        
+        .appname {
+            color: rgb(209, 207, 211)!important;
+            border-left: 1px solid rgb(209, 197, 205);
+            padding-left: 4px;
+        }
+        
+        .regitrationcardbody>form>.row>.col-md-6>input:focus {
+            box-shadow: none !important;
+            box-shadow: 0 0 0 2px rgb(196, 159, 223) !important;
+        }
+        
+        .required {
+            color: rgb(240, 151, 200);
+        }
+        
+        @media(min-width:200px) and (max-width:767px) {
+            .mdbtn {
+                display: block !important;
+            }
+        }
+        /* note specify your group b4 u style but if probably a style is style in your
+   group is from the first group changes that affect it,it either use it or skip
+*/
