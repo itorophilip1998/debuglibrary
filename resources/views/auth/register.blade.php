@@ -1,7 +1,6 @@
 @extends('layouts.app')
-
 @section('content')
-<div class="container">
+<div class="container pt-5 mt-3">
     <div class="row justify-content-center">
         <div class="col-md-8 col-lg-6">
             <div class="card shadow-lg mastercard border-lg" > 
@@ -18,13 +17,12 @@
                                 <input id="username" placeholder="(e.g) peterparker" type="text" class="rounded-pill rounder-1 form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus>
 
                                 @error('username')
-                                    <span class="registertext" role="alert">
+                                    <span class="registertext alerter invalid-tooltip" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
                             </div>
-                        </div>
-
+                        </div>  
                         <div class="form-group row">
                             <label for="email" class="col-12 registertext ml-2  col-form-label ">{{ __('Email') }} <span class="required">*</span></label>
 
@@ -32,7 +30,7 @@
                                 <input id="email"  placeholder="(e.g) peterpaker@gmail.com" type="email" class=" rounded-pill rounder-1 form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
                                 @error('email')
-                                    <span class="registertext" role="alert">
+                                    <span class="registertext alerter invalid-tooltip" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
@@ -47,7 +45,7 @@
                                 <input id="password" type="password" class="rounded-pill rounder-1 form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
                                 @error('password')
-                                    <span class="registertext" role="alert">
+                                    <span class="registertext alerter invalid-tooltip" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
