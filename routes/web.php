@@ -18,4 +18,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::PUT('/update/{id}','PostController@updateProfile')->name('updateProfile');
+Route::PUT('/update/{id}', 'PostController@updateProfile')->name('updateProfile');
+Rout::post('/post/{id}' 'Postcontroller@post')->name('post');
