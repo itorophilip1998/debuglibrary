@@ -22,7 +22,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 <<<<<<< HEAD
 Route::PUT('/update/{id}', 'PostController@updateProfile')->name('updateProfile');
-Rout::post('/post/{id}' 'Postcontroller@post')->name('post');
+
 =======
 Route::get('/dashboard','DashboardController@dashboard')->name('dashboard');
 Route::get('/forum','ForumController@forum')->name('forum');
@@ -32,7 +32,8 @@ Route::get('/chat','ChatController@chat')->name('chat');
 // All Verb Route For Delete,Update and edit
 Route::PUT('/update/{id}','PostController@updateProfile')->name('updateProfile');
 
-
+// post route
+Route::post('/post/{id}' 'Postcontroller@post')->name('post');
 
 
 >>>>>>> 9680016f65a14e0f0d386edb457a1b8bd54a5488
