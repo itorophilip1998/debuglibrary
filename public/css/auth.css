@@ -1,4 +1,4 @@
-        /* Group 3 by Itoro*/
+        /* Group 3 by Itoro register*/
         
         .body {
             background-color: white !important;
@@ -10,6 +10,12 @@
         
         .background {
             background-color: indigo !important;
+            opacity: 80%;
+        }
+        
+        .text {
+            color: indigo !important;
+            opacity: 80%;
         }
         
         .regitrationcardheader,
@@ -20,10 +26,58 @@
             opacity: 80%;
         }
         
+        .resetheadercard {
+            background-color: indigo !important;
+            color: whitesmoke !important;
+            opacity: 80%;
+            border-top-left-radius: 23px !important;
+        }
+        
         .allbtn {
             background-color: rgb(90, 14, 145) !important;
             color: whitesmoke !important;
             opacity: 80%;
+            margin-left: 0px !important;
+            width: 100% !important;
+        }
+        
+        .allbtn:hover {
+            background-color: whitesmoke !important;
+            color: rgb(90, 14, 145) !important;
+            font-weight: bold;
+            border: none;
+            opacity: 80%;
+            margin-left: 0px !important;
+            width: 100% !important;
+        }
+        
+        .allbtnreset {
+            background-color: rgb(90, 14, 145) !important;
+            color: whitesmoke !important;
+            opacity: 80%;
+            margin-left: 0px !important;
+            width: 100% !important;
+            border-radius: 18px !important;
+        }
+        
+        .allbtnreset:hover {
+            background-color: white !important;
+            color: rgb(90, 14, 145) !important;
+            font-weight: bold;
+            border: 1px solid indigo;
+            opacity: 80%;
+            border-radius: 18px !important;
+        }
+        
+        .resetbordercard {
+            border: 1px solid;
+            border-bottom-right-radius: 23px !important;
+            border-top-left-radius: 23px !important;
+        }
+        
+        .form-check-label {
+            color: indigo !important;
+            font-size: 14px !important;
         }
         
         .registertext {
@@ -34,15 +88,13 @@
         .rounder-1 {
             border-radius: 10px !important;
         }
-        /* .alerter {
-            width: fit-content !important;
-            background-color: antiquewhite !important;
-            padding: 2px !important;
-            float: right !important;
-        } */
         
-        .invalid-tooltip {
-            background-color: whitesmoke !important;
+        .resetinput {
+            border-radius: 18px !important;
+        }
+        
+        .remem {
+            margin-top: -5% !important;
         }
         
         .regitrationcardbody>form>.row>.col-md-6>input {
@@ -84,6 +136,36 @@
             text-shadow: 5px 5px 5px rgb(61, 59, 60);
         }
         
+        .forgetp {
+            margin-top: 0% !important;
+            float: right !important;
+        }
+        
+        .btn-link {
+            margin-top: -1% !important;
+            text-align: center !important;
+            display: inline-block !important;
+            width: 100% !important;
+            font-size: 15px !important;
+            color: indigo !important;
+        }
+        
+        .fa-eye-slash {
+            position: relative;
+            margin-right: 100% !important;
+            margin-top: 30px;
+            z-index: 1;
+            float: right !important;
+            color: indigo;
+            cursor: pointer;
+        }
+        
+        .slash {
+            position: relative;
+            float: right !important;
+            margin-top: -57px;
+        }
+        
         @media(min-width:200px) and (max-width:767px) {
             .mdbtn {
                 display: block !important;
@@ -92,3 +174,20 @@
         /* note specify your group b4 u style but if probably a style is style in your
    group is from the first group changes that affect it,it either use it or skip
 */
+        /* group3 stage2/stage3  sidebar/chat by itoro */
+        
+        .sender {
+            border-radius: 50px;
+            border-top-left-radius: 0px;
+            background-color: rgb(230, 230, 236) !important;
+            padding: 20px;
+            color: rgb(68, 64, 67);
+        }
+        
+        .reciever {
+            border-radius: 50px;
+            background-color: rgb(52, 17, 75) !important;
+            border-top-right-radius: 0px;
+            opacity: 80%;
+            padding: 20px;
+        }

@@ -1,35 +1,35 @@
  
  <div class="col-md-3 col-sm-12 ">
    <ul class="mobile-view"> 
-   <li> <a href="/dashboard" class="btn btn-default text-info"><i class="fa fa-dashboard mr-3" aria-hidden="true"></i></a></li>
-   <li> <a href="/forum" class="btn btn-default text-info"> <i class="fa fa-address-book mr-3" aria-hidden="true"></i></a></li>
-   <li> <a href="/chart" class="btn btn-default text-info"> <i class="fa fa-tv mr-3" aria-hidden="true"></i> </a></li>
-   <li> <a href="/friends" class="btn btn-default text-info"> <i class="fa fa-users mr-3" aria-hidden="true"></i></a></li>
-   <li> <a href="/logout" class="btn btn-default text-info"> <i class="fa fa-power-off mr-3" aria-hidden="true"></i></a></li>
+   <li> <a href="/dashboard" class="btn btn-default text"><i class="fa fa-dashboard mr-3" aria-hidden="true"></i></a></li>
+   <li> <a href="/forum" class="btn btn-default text"> <i class="fa fa-address-book mr-3" aria-hidden="true"></i></a></li>
+   <li> <a href="/chart" class="btn btn-default text"> <i class="fa fa-tv mr-3" aria-hidden="true"></i> </a></li>
+   <li> <a href="/friends" class="btn btn-default text"> <i class="fa fa-users mr-3" aria-hidden="true"></i></a></li>
+   <li> <a href="/logout" class="btn btn-default text"> <i class="fa fa-power-off mr-3" aria-hidden="true"></i></a></li>
    
   </ul>
     <ul class="list-group shadow-lg desktop-view " style="position:fixed;"> 
         <li class="list-group-item d-flex justify-content-between align-items-center">
-       <a href="/dashboard" class="btn btn-default text-info"><i class="fa fa-dashboard fa-2x mr-3" aria-hidden="true"></i><span>Dashboard</span> </a>
-        <span class="badge badge-info badge-pill"></span>
+       <a href="/dashboard" class="btn btn-default text"><i class="fa fa-dashboard fa-2x mr-3" aria-hidden="true"></i><span>Dashboard</span> </a>
+        <span class="badge background color badge-pill">1</span>
         </li>
         <li class="list-group-item d-flex justify-content-between align-items-center">
-         <a href="/forum" class="btn btn-default text-info"><i class="fa fa-tv fa-2x mr-3" aria-hidden="true"></i><span>Forum</span> </a>
+         <a href="/forum" class="btn btn-default text"><i class="fa fa-tv fa-2x mr-3" aria-hidden="true"></i><span>Forum</span> </a>
        
         </li>
         <li class="list-group-item d-flex justify-content-between align-items-center"> 
-            <a href="/chat" class="btn btn-default text-info"><i class="fa fa-comments fa-2x mr-3" aria-hidden="true"></i> <span>Chat</span> </a>
+            <a href="/chat" class="btn btn-default text"><i class="fa fa-comments fa-2x mr-3" aria-hidden="true"></i> <span>Chat</span> </a>
       
         </li>
         <li class="list-group-item d-flex justify-content-between align-items-center">
-            <a href="/friends" class="btn btn-default text-info"><i class="fa fa-users fa-2x mr-3" aria-hidden="true"></i> <span>Friends</span> </a>
-        <span class="badge badge-info badge-pill"> </span>
+            <a href="/friends" class="btn btn-default text"><i class="fa fa-users fa-2x mr-3" aria-hidden="true"></i> <span>Friends</span> </a>
+        <span class="badge background color badge-pill">20 </span>
 
         </li>
         <li class="list-group-item d-flex justify-content-between align-items-center">
           <form  action="{{ route('logout') }}" method="POST" >
             @csrf
-               <button type="submit" class="btn btn-default text-info pl-3"><i class="fa fa-power-off  fa-2x mr-3" aria-hidden="true"></i> &ensp;<span>Logout</span> </button>
+               <button type="submit" class="btn btn-default text pl-3"><i class="fa fa-power-off  fa-2x mr-3" aria-hidden="true"></i>&ensp;<span>Logout</span> </button>
         </form>   
         </li>   
               <br> <br> 
@@ -40,11 +40,11 @@
               <br>
               <div class="row mb-2 pl-2"> 
                   <div class="col-2"><a href=""><img src="/images/logo.jpg"  class="rounded-circle" style="width:40px;height:38px"></a></div>
-                  <div class="col-10 pt-2"><a href=""><h6>itoro emmanuelPilip</h6></a></div>
+                  <div class="col-10 pt-2"><a href=""  class="text"><h6 >itoro emmanuelPilip</h6></a></div>
               </div> 
                <div class="row mb-2 pl-2"> 
                   <div class="col-2"><a href=""><img src="/images/logo2.jpg"  class="rounded-circle" style="width:40px;height:38px"></a></div>
-                  <div class="col-10 pt-2"><a href=""><h6>Ekop happinessakpan</h6></a></div>
+                  <div class="col-10 pt-2"><a href="" class="text"><h6>Ekop happinessakpan</h6></a></div>
               </div> 
       </ul>
       <br><br>
