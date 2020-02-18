@@ -7,6 +7,14 @@ use App\Post;
 
 class PostController extends Controller
 {
+    //return view
+    public function forum()
+    {
+        $post = Post::OrderBy('created_at', 'desc')->get();
+
+        return view('/forum', compact('post'));
+    }
+
     //create post in forum
     public function store(Request $request)
     {
@@ -42,18 +50,15 @@ class PostController extends Controller
     }
 
     public function delete($id)
-    { 
-        $post=Post::findorfail($id); 
-        if(auth()->user() == $post->user){
-           $post->delete();
-          session()->flash('success','Successfully Deleted!');
-          return redirect()->back();
+    {
+        $post = Post::findorfail($id);
+        if (auth()->user() == $post->user) {
+            $post->delete();
+            session()->flash('success', 'Successfully Deleted!');
 
+            return redirect()->back();
+        } else {
+            return redirect()->back();
         }
-       else
-       { 
-        return redirect()->back();
-       }
-        
     }
 }
