@@ -19,16 +19,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet"> 
     <link href="{{ URL::to('css/auth.css') }}" rel="stylesheet">
-    <link rel="shortcut icon" href="{{ URL::to('images/logo3.jpg') }}" type="image/x-icon"> 
+    <link rel="shortcut icon" href="{{ URL::to('images/loop1.png') }}" type="image/x-icon"> 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
     {{-- default navbar --}}
     <div id="app">
-      <nav class="navbar navbar-expand-md  shadow-sm">
+      <nav class="navbar navbar-expand-md  shadow-sm fixed-top">
             <div class="container">
                 <a class="navbar-brand m-auto" href="{{ url('/') }}">
-                        <span class="Logo"><img src="{{ URL::to('images/logo3.jpg') }}" alt="" width="31px" height="30px"></span> 
+                        <span class="Logo"><img src="{{ URL::to('images/loop1.png') }}" alt="" width="31px" height="30px"></span> 
                        <span class="appname">DebugLibrary</span>
                 </a>
                 {{-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -57,7 +57,7 @@
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                    {{ Auth::user()->username }} <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -78,7 +78,7 @@
             </div>
         </nav> 
 
-        <main class="py-4">
+        <main class="py-5 mt-0">
             @yield('content')
         </main>
     </div>
