@@ -34,6 +34,16 @@
         .rounder-1 {
             border-radius: 10px !important;
         }
+        /* .alerter {
+            width: fit-content !important;
+            background-color: antiquewhite !important;
+            padding: 2px !important;
+            float: right !important;
+        } */
+        
+        .invalid-tooltip {
+            background-color: whitesmoke !important;
+        }
         
         .regitrationcardbody>form>.row>.col-md-6>input {
             color: indigo !important;
