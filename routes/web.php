@@ -17,23 +17,17 @@ Route::get('/', function () {
 // All Auth Route
 Auth::routes();
 
-
 // all Route Thet return View
 Route::get('/home', 'HomeController@index')->name('home');
-<<<<<<< HEAD
-Route::PUT('/update/{id}', 'PostController@updateProfile')->name('updateProfile');
+Route::PUT('/update/{id}', 'ProfileController@updateProfile')->name('updateProfile');
 
-=======
-Route::get('/dashboard','DashboardController@dashboard')->name('dashboard');
-Route::get('/forum','ForumController@forum')->name('forum');
-Route::get('/friends','FriendsController@friends')->name('friends');
-Route::get('/chat','ChatController@chat')->name('chat'); 
+Route::get('/dashboard', 'DashboardController@dashboard')->name('dashboard');
+Route::get('/forum', 'ForumController@forum')->name('forum');
+Route::get('/friends', 'FriendsController@friends')->name('friends');
+Route::get('/chat', 'ChatController@chat')->name('chat');
 
 // All Verb Route For Delete,Update and edit
-Route::PUT('/update/{id}','PostController@updateProfile')->name('updateProfile');
+Route::PUT('/update/{id}', 'PostController@updateProfile')->name('updateProfile');
 
 // post route
-Route::post('/post/{id}' 'Postcontroller@post')->name('post');
-
-
->>>>>>> 9680016f65a14e0f0d386edb457a1b8bd54a5488
+Route::post('/post/{id}', 'Postcontroller@post')->name('post');

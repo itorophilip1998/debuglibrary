@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use App\Chat;
+
 class User extends Authenticatable
 {
     use Notifiable;
@@ -35,17 +35,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-<<<<<<< HEAD
 
 //      @var array
-    
+
 //    protected $fillable = [
 //        'title', 'body',
 //    ];
-=======
-    public function chats()
-    {
-        return $this->hasMany(Chat::class);
-    }
->>>>>>> 9680016f65a14e0f0d386edb457a1b8bd54a5488
 }
