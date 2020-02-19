@@ -10,12 +10,24 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+// landing Page Route
 Route::get('/', function () {
     return view('landing');
 });
-
+// All Auth Route
 Auth::routes();
 
+
+// all Route Thet return View
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/dashboard','DashboardController@dashboard')->name('dashboard');
+Route::get('/forum','ForumController@forum')->name('forum');
+Route::get('/friends','FriendsController@friends')->name('friends');
+Route::get('/chat','ChatController@chat')->name('chat'); 
+
+// All Verb Route For Delete,Update and edit
 Route::PUT('/update/{id}','PostController@updateProfile')->name('updateProfile');
+
+
+
+

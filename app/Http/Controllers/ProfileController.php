@@ -26,10 +26,7 @@ class ProfileController extends Controller
             'description',
         ]);
 
-        // $profile = $request->all();
-        // $profile['user_id'] = auth()->user()->id;
-        
-        // Profile::create($profile);
+         
 
         $profile = Profile::findorfail($id);
         $profile->first_name = $request->first_name;
