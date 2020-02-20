@@ -3,11 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Post;
 class ForumController extends Controller
 {
-    public function forum()
-    {
-        return view('/forum');
-    }
+   //return view
+   public function forum()
+   {
+       $posts = Post::OrderBy('created_at', 'desc')->get();
+
+       return view('/forum', compact('posts'));
+   }
 }

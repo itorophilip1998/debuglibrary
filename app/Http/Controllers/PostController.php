@@ -7,13 +7,7 @@ use App\Post;
 
 class PostController extends Controller
 {
-    //return view
-    public function forum()
-    {
-        $post = Post::OrderBy('created_at', 'desc')->get();
-
-        return view('/forum', compact('post'));
-    }
+   
 
     //create post in forum
     public function store(Request $request)
