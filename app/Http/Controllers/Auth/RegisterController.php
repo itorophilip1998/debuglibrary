@@ -73,7 +73,7 @@ class RegisterController extends Controller
         ]);
         Mail::to($data['email'])->send(new WelcomeMail($user));
 
-        $profile =new  Profile();
+        $profile= new Profile();
         $profile->first_name =null;
         $profile->last_name = null;
         $profile->phone_number = null;
