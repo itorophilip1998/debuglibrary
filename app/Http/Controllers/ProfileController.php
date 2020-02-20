@@ -12,7 +12,7 @@ class ProfileController extends Controller
     {
         $this->middleware('auth');
     }
-    
+
     public function updateProfile(Request $request, $id)
     {
         $request->validate([
@@ -28,7 +28,7 @@ class ProfileController extends Controller
 
         // $profile = $request->all();
         // $profile['user_id'] = auth()->user()->id;
-        
+
         // Profile::create($profile);
 
         $profile = Profile::findorfail($id);
@@ -38,13 +38,20 @@ class ProfileController extends Controller
         $profile->email = $request->email;
         $profile->gender = $request->gender;
         $profile->city = $request->city;
-        $profile->status = $request->status;
-        $profile->description = $request->description;
+        $profile->marital_status = $request->marital_status;
+        $profile->field_of_expertise = $request->field_of_expertise;
+        $profile->bio = $request->bio;
 
         $profile['user_id'] = auth()->user()->id;
         $profile->save();
 
         session()->flash('success', 'Profile has been updated successfully!');
-        return redirect('/dashboard');
+        return redirect('/home');
+    }
+
+    public function userprofile(Request $request, Profile $id){
+        $profile = Profile::findorfail($id);
+        dd($id);
+        return view('userprofile', compact('profile'));
     }
 }

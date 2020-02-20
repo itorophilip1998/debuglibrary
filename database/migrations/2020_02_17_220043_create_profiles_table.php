@@ -22,10 +22,11 @@ class CreateProfilesTable extends Migration
             $table->string('email')->nullable();
             $table->string('gender')->nullable();
             $table->string('city')->nullable();
-            $table->string('status')->nullable();
-            $table->string('description')->nullable();
+            $table->string('marital_status')->nullable();
+            $table->string('field_of_expertise')->nullable();
+            $table->string('bio')->nullable();
             $table->timestamps('');
-            
+
         });
     }
 

@@ -18,4 +18,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::PUT('/update/{id}','PostController@updateProfile')->name('updateProfile');
+Route::put('/update/{id}','PostController@updateProfile')->name('updateProfile');
+Route::get('/dashindex', 'DashboardController@dashindex')->name('dashindex');
+Route::get('/userprofiler', 'UserController@userprofiler')->name('userprofiler');
+Route::post('/profilepicture', 'UserController@updateAvatar')->name('updateAvatar');
+
