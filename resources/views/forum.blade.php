@@ -96,14 +96,16 @@
 
 
 
-                    <div class="w-75 m-auto mt-5">
+                    {{-- <div class="w-75 m-auto mt-5">
                         @if(session()->has('success'))
                         <div class="alert alert-info" role="alert">
                             {{session()->get('success')}}
                         </div>
                         @endif
-                    </div>
+                    </div> --}}
                 </div>
+                    {{-- Include footer here...... --}}
+@include('layouts.footer')
             </div>
         </div>
     </div>
