@@ -10,8 +10,8 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use App\Mail\WelcomeMail;
+use App\Profile;
 use Illuminate\Support\Facades\Mail;
-
 class RegisterController extends Controller
 {
     /*
@@ -73,6 +73,18 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
         Mail::to($data['email'])->send(new WelcomeMail($user));
+
+        $profile= new Profile();
+        $profile->first_name =null;
+        $profile->last_name = null;
+        $profile->phone_number = null;
+        $profile->email =null;
+        $profile->gender =null;
+        $profile->city = null;
+        $profile->status = null;
+        $profile->description = null;
+        $profile->user_id =null;
+        $profile->save();
         return $user;
     }
 }

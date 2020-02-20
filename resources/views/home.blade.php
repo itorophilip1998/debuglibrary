@@ -1,14 +1,20 @@
+<<<<<<< HEAD
 @extends('layouts.app')
+=======
+@extends('layouts.app') 
+>>>>>>> 976dcfa5bfd8a39a1998c87f4c7c86c016ec474e
 @section('content')
 <br>
 <div class="p-1">
     <div class="row">
         @include('layouts.sidebar')
         <div class="col-md-8 col-sm-12 ">
-            <h2 class="text-center text-info text-secondary">Dashboard <i class="fa fa-dashboard" aria-hidden="true"></i></h2>
+            <h2 class="text-center text ">Home <i class="fa fa-home" aria-hidden="true"></i></h2>
             <hr>
-            <div class="container">
+        
+            <div class="container-fliud">
                 <div class="form p-5 shadow-lg px-0 mastercard ">
+<<<<<<< HEAD
                     <i class="fa fa-user-circle-o 3x" aria-hidden="true"></i>
                     User Profile:
                     <div class="row">
@@ -38,19 +44,24 @@
                     </div> --}}
 
                     </div>
+=======
+                  Home  Content here. ........
+>>>>>>> 976dcfa5bfd8a39a1998c87f4c7c86c016ec474e
 
 
 
 
 
-                    <div class="w-75 m-auto mt-5">
+                    {{-- <div class="w-75 m-auto mt-5">
                         @if(session()->has('success'))
                         <div class="alert alert-info" role="alert">
                             {{session()->get('success')}}
                         </div>
                         @endif
-                    </div>
+                    </div> --}}
                 </div>
+                    {{-- Include footer here...... --}}
+@include('layouts.footer')
             </div>
         </div>
     </div>

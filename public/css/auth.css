@@ -1,17 +1,23 @@
-        /* Group 3 by Itoro*/
-
+        /* Group 3 by Itoro register*/
+        
         .body {
             background-color: white !important;
         }
-
+        
         .color {
             color: rgb(209, 207, 211)!important;
         }
-
+        
         .background {
             background-color: indigo !important;
+            opacity: 80%;
         }
-
+        
+        .text {
+            color: indigo !important;
+            opacity: 80%;
+        }
+        
         .regitrationcardheader,
         .navbar,
         .navbar-ul>li>a {
@@ -19,14 +25,14 @@
             color: whitesmoke !important;
             opacity: 80%;
         }
-
+        
         .resetheadercard {
             background-color: indigo !important;
             color: whitesmoke !important;
             opacity: 80%;
             border-top-left-radius: 23px !important;
         }
-
+        
         .allbtn {
             background-color: rgb(90, 14, 145) !important;
             color: whitesmoke !important;
@@ -34,7 +40,7 @@
             margin-left: 0px !important;
             width: 100% !important;
         }
-
+        
         .allbtn:hover {
             background-color: whitesmoke !important;
             color: rgb(90, 14, 145) !important;
@@ -44,7 +50,7 @@
             margin-left: 0px !important;
             width: 100% !important;
         }
-
+        
         .allbtnreset {
             background-color: rgb(90, 14, 145) !important;
             color: whitesmoke !important;
@@ -53,7 +59,7 @@
             width: 100% !important;
             border-radius: 18px !important;
         }
-
+        
         .allbtnreset:hover {
             background-color: white !important;
             color: rgb(90, 14, 145) !important;
@@ -62,79 +68,79 @@
             opacity: 80%;
             border-radius: 18px !important;
         }
-
+        
         .resetbordercard {
             border: 1px solid;
             border-bottom-right-radius: 23px !important;
             border-top-left-radius: 23px !important;
         }
-
+        
         .form-check-label {
             color: indigo !important;
             font-size: 14px !important;
         }
-
+        
         .registertext {
             color: indigo !important;
             font-size: 13px !important;
         }
-
+        
         .rounder-1 {
             border-radius: 10px !important;
         }
-
+        
         .resetinput {
             border-radius: 18px !important;
         }
-
+        
         .remem {
             margin-top: -5% !important;
         }
-
+        
         .regitrationcardbody>form>.row>.col-md-6>input {
             color: indigo !important;
             box-shadow: 0 0 0 0.1px rgb(191, 184, 196)!important;
         }
-
+        
         .appname {
             color: rgb(209, 207, 211)!important;
             border-left: 1px solid rgb(209, 197, 205);
             padding-left: 4px;
         }
-
+        
         input:focus,
         #password:focus,
         #password-confirm:focus {
             box-shadow: none !important;
             box-shadow: 0 0 0 2px rgb(196, 159, 223) !important;
         }
-
+        
         .required {
             color: rgb(240, 151, 200);
         }
-
+        
         .mastercard {
             border-bottom-right-radius: 50px !important;
             border-top-left-radius: 50px !important;
             border-top-right-radius: 10px !important;
             border-bottom-left-radius: 10px !important;
         }
-
+        
         .regitrationcardheader {
             border-top-left-radius: 50px !important;
             border-top-right-radius: 10px !important;
         }
-
+        
         .card_title {
             font-size: 25px !important;
             text-shadow: 5px 5px 5px rgb(61, 59, 60);
         }
-
+        
         .forgetp {
             margin-top: 0% !important;
             float: right !important;
         }
-
+        
         .btn-link {
             margin-top: -1% !important;
             text-align: center !important;
@@ -143,7 +149,7 @@
             font-size: 15px !important;
             color: indigo !important;
         }
-
+        
         .fa-eye-slash {
             position: relative;
             margin-right: 100% !important;
@@ -153,13 +159,13 @@
             color: indigo;
             cursor: pointer;
         }
-
+        
         .slash {
             position: relative;
             float: right !important;
             margin-top: -57px;
         }
-
+        
         @media(min-width:200px) and (max-width:767px) {
             .mdbtn {
                 display: block !important;

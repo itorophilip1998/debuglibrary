@@ -1,0 +1,17 @@
+    /* group3 stage2/stage3  sidebar/chat by itoro */
+    
+    .sender {
+        border-radius: 50px;
+        border-top-left-radius: 0px;
+        background-color: rgb(230, 230, 236) !important;
+        padding: 20px;
+        color: rgb(68, 64, 67);
+    }
+    
+    .reciever {
+        border-radius: 50px;
+        background-color: rgb(52, 17, 75) !important;
+        border-top-right-radius: 0px;
+        opacity: 80%;
+        padding: 20px;
+    }
