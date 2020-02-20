@@ -17,7 +17,6 @@ Route::get('/', function () {
 // All Auth Route
 Auth::routes();
 
-
 // all Route Thet return View
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/dashboard','DashboardController@dashboard')->name('dashboard');
@@ -28,7 +27,10 @@ Route::get('/chat/{username}','ChatController@chatroom')->name('chatroom');
 
 // All Verb Route For Delete,Update and edit
 Route::PUT('/update/{id}','PostController@updateProfile')->name('updateProfile');
+Route::PUT('/update/{id}', 'ProfileController@updateProfile')->name('updateProfile');
+ 
+// All Verb Route For Delete,Update and edit
+Route::PUT('/update/{id}', 'PostController@updateProfile')->name('updateProfile');
 
-
-
-
+// post route
+Route::post('/post/{id}', 'Postcontroller@post')->name('post');
