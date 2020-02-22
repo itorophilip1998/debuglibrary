@@ -70,13 +70,7 @@
          </div>
 
 
-                    {{-- <div class="w-75 m-auto mt-5">
-                        @if(session()->has('success'))
-                        <div class="alert alert-info" role="alert">
-                            {{session()->get('success')}}
-                        </div>
-                        @endif
-                    </div> --}}
+                     
                 </div>
 
                 {{-- Include footer here...... --}}

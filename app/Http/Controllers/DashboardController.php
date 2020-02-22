@@ -4,16 +4,31 @@ namespace App\Http\Controllers;
 
 use App\Profile;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\User; 
+use App\Friend; 
+use Illuminate\Support\Facades\DB;
 
 class DashboardController extends Controller
 {
-    public function dashindex(Request $request, Profile $id){
-        if (auth()->check()){
-        $profile = Profile::where('id',$id)->first();
-        // dd($id);
-        }
-        return view('/dashindex', compact('profile'));
+    public function __construct()
+    {
+        $this->middleware('auth');
     }
+    public function dashboard(){ 
+        $id=Auth::user()->id; 
+        $profile = Profile::findorfail($id); 
+        return view('/dashboard', compact('profile'));
+    }
+    
+
+    public function userdashboard($id){   
+        $profile = User::findorfail($id);   
+        return view('/dashboard', compact('profile'));
+    }
+
+   
+    
 
     
 }

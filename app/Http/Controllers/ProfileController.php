@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Profile;
+use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller
 {
@@ -13,28 +14,15 @@ class ProfileController extends Controller
         $this->middleware('auth');
     }
 
-    public function updateProfile(Request $request, $id)
-    {
-        $request->validate([
-            'first_name'=>'string|min:3|max:20',
-            'last_name'=>'string|min:3|max:20',
-            'phone_number'=>'int|min:11|max:20',
-            'email'=>'email|min:10|max:50',
-            'gender'=>'string',
-            'city',
-            'status',
-            'description',
-        ]);
-
-<<<<<<< HEAD
-        // $profile = $request->all();
-        // $profile['user_id'] = auth()->user()->id;
-
-        // Profile::create($profile);
-=======
-         
->>>>>>> 976dcfa5bfd8a39a1998c87f4c7c86c016ec474e
-
+    public function profileupdate(Request $request)
+    {  
+        // $this->validate($request,[  
+        //     'phone_number'=>'int|min:11|max:15',
+        //     'email'=>'email|min:10|max:50',
+        //     'gender'=>'string', 
+        //     'description'=>'max:160'
+        // ]); 
+         $id= Auth::user()->id;
         $profile = Profile::findorfail($id);
         $profile->first_name = $request->first_name;
         $profile->last_name = $request->last_name;
@@ -45,17 +33,14 @@ class ProfileController extends Controller
         $profile->marital_status = $request->marital_status;
         $profile->field_of_expertise = $request->field_of_expertise;
         $profile->bio = $request->bio;
-
-        $profile['user_id'] = auth()->user()->id;
+        $profile->user_id = $id;
         $profile->save();
-
         session()->flash('success', 'Profile has been updated successfully!');
-        return redirect('/home');
+        return redirect('/dashboard');
     }
 
-    public function userprofile(Request $request, Profile $id){
-        $profile = Profile::findorfail($id);
-        dd($id);
-        return view('userprofile', compact('profile'));
+    public function userprofile($id){
+        $profile = Profile::findorfail($id); 
+        return view('darshboard', compact('profile'));
     }
 }

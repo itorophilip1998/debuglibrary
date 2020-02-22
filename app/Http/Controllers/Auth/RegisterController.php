@@ -9,8 +9,7 @@ use App\Profile;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
-use App\Mail\WelcomeMail;
-use App\Profile;
+use App\Mail\WelcomeMail; 
 use Illuminate\Support\Facades\Mail;
 class RegisterController extends Controller
 {
@@ -32,7 +31,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/dashindex';
+    protected $redirectTo = '/home';
 
     /**
      * Create a new controller instance.
@@ -72,8 +71,6 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
-        Mail::to($data['email'])->send(new WelcomeMail($user));
-
         $profile= new Profile();
         $profile->first_name =null;
         $profile->last_name = null;
@@ -81,10 +78,16 @@ class RegisterController extends Controller
         $profile->email =null;
         $profile->gender =null;
         $profile->city = null;
-        $profile->status = null;
-        $profile->description = null;
+        $profile->marital_status = null;
+        $profile->bio = null;
         $profile->user_id =null;
+        $profile->field_of_expertise = null;
         $profile->save();
-        return $user;
+        Mail::to($data['email'])->send(new WelcomeMail($user));
+
+        
+        return $user; 
+   
+
     }
 }

@@ -7,7 +7,10 @@ use App\Post;
 
 class PostController extends Controller
 {
-   
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
     //create post in forum
     public function store(Request $request)

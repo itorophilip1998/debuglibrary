@@ -15,9 +15,58 @@
            * {
      font-size: 18px;
  }
+/* animation and transition */
+#animation-header  h1 {
+    font-size: 50px;
+    line-height: 1.3;
+    position: relative;
+    animation: heading;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
 
+@keyframes heading {
+    0% {
+        top: -300px
+    }
+    100% {
+        top: 0px
+    }
+}
+.lead{
+    position: relative;
+    animation-name: content;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
 
+@keyframes content {
+    0% {
+        left: -1000px;
+    }
+    100% {
+        left: 0px;
+    }
+}
+.btn {   
+    position: relative;
+    animation-name: btn;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
 
+@keyframes btn {
+  0% {
+    transform: rotateY(180deg);
+
+    }
+    100% {
+      transform: rotateY(0deg);
+
+    }
+}
+ 
  /* Styling for the main section  */
  .allbtn {
     background-color: rgb(90, 14, 145) !important;
@@ -95,34 +144,43 @@ p.lead{
  
  body { 
 	
-     background-color: whitesmoke;
+     background-color: white !important;
+     /* opacity:80%;   */
+}
+.img{
+  background-image:url('https://tek2d.com/wp-content/uploads/2019/01/UI-UX.jpg');
+  background-size:cover !important;
+  height:100vh !important;
 }
              
         </style>
     </head>
-    <body>
+    <body> 
       <main class="bd-masthead">
         <div class="container">
           <div class="row">
-            <div class="col-6 mx-auto col-md-6 order-md-2">
-              <img src=" {{URL::to('images/uiux.PNG')}} " alt="#"  class="img-fluid mb-3 mb-md-0 w-100 rounded-lg" >
+          
+            <div class="col-md-6 text-center text-md-left " >
               
+      <br> 
+      <br> 
+            <div id="animation-header">
+              <h1 class="mb-3 bd-text-bright ">DebugLibrary</h1>
             </div>
-    
-            <div class="col-md-6 order-md-1 text-center text-md-left pr-md-5 " >
-              <h1 class="mb-3 bd-text-bright">DebugLibrary</h1>
-              <p class="lead">
-                A community of people with like minds with the passion to provide solutions to challenges related to both harware and software.  
-              </p>
-              <p class="lead mb-4">
-                DebugLibrary is a platform for developers and people into ICT to collaborate and render tech-based solutions to problems that are tech inclined. Come and join this great community!
-              </p>
+              <div id="animation-body">
+                <p class="lead">
+                  A community of people with like minds with the passion to provide solutions to challenges related to both harware and software.  
+                </p>
+                <p class="lead mb-4">
+                  DebugLibrary is a platform for developers and people into ICT to collaborate and render tech-based solutions to problems that are tech inclined. Come and join this great community!
+                </p>
+              </div>
               <div class="row mx-n2">
                 <div class="col-md px-2">
-                  <a href="{{ route('register') }}" class="btn btn-lg btn-bd-primary rounded-pill allbtn w-100 mb-3">Get started</a>
+                  <a href="{{ route('register') }}"  id="btn" class="btn btn-lg btn-bd-primary rounded-pill allbtn w-100 mb-3 animationbtn-1" >Get started</a>
                 </div>
                 <div class="col-md px-2">
-                  <a href=" {{route('login')}} " class="btn btn-lg btn-outline-secondary rounded-pill logbtn w-100 mb-3">Login</a>
+                  <a href=" {{route('login')}} " id="btn" class="btn btn-lg btn-outline-secondary rounded-pill logbtn w-100 mb-3 animationbtn-2" >Login</a>
                 </div>
                 
               </div>
@@ -131,6 +189,10 @@ p.lead{
               </p>
               
             </div>
+            <div class="col-12 img col-md-6 pt-0 ">
+               
+            </div>
+    
           </div>
         </div>
       </main>
