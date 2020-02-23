@@ -13,7 +13,7 @@
                     <ul class="list-group">
                               <div class=" w-100 p-2 m-auto text-info rounded-lg">
                                   {{-- list of all added friends --}}
-                             <li class="list-group-item w-100"><a href="" class="allbtn rounded-pill p-2"><i class="fa fa-refresh" aria-hidden="true"></i> Refresh</a> <span class="float-right text-dark">Active Friends</span></li>
+                             <li class="list-group-item w-100"><a href="" class="btn-sm btn btn-secondary   rounded-pill p-2"><i class="fa fa-refresh" aria-hidden="true"></i> Refresh</a> <span class="float-right text-dark">Active Friends</span></li>
                              @if(count($friends)>0)
                              @foreach($friends->all() as $friends)
                              <li class="list-group-item w-100"><a href="/dashboard/{{$friends->id}}"><img src=""  class="rounded-circle" style="width:40px;height:38px"></a> <a class="text" href="/chat/{{$friends->username}}">{{$friends->username}}</a> <span style="width:10px;height:10px" class="rounded-circle float-right bg-success"></span></li> 

@@ -10,26 +10,26 @@
 
     <ul class="list-group shadow-lg desktop-view " style="position:fixed;"> 
         <li class="list-group-item d-flex justify-content-between align-items-center">
-       <a href="/dashboard" class="btn btn-default text"><i class="fa fa-dashboard fa-2x mr-3" aria-hidden="true"></i><span>Dashboard</span> </a>
+       <a href="/dashboard" class="btn btn-default text"><i class="fa fa-dashboard fa-2x mr-3" aria-hidden="true"></i><span class="text-secondary">Dashboard</span> </a>
         <span class="badge badge-secondary badge-pill">1</span>
         </li>
         <li class="list-group-item d-flex justify-content-between align-items-center">
-         <a href="/forum" class="btn btn-default text"><i class="fa fa-tv fa-2x mr-3" aria-hidden="true"></i><span>Forum</span> </a>
+         <a href="/forum" class="btn btn-default text"><i class="fa fa-tv fa-2x mr-3" aria-hidden="true"></i><span class="text-secondary">Forum</span> </a>
        
         </li>
         <li class="list-group-item d-flex justify-content-between align-items-center"> 
-            <a href="/chat" class="btn btn-default text"><i class="fa fa-comments fa-2x mr-3" aria-hidden="true"></i> <span>Chat</span> </a>
+            <a href="/chat" class="btn btn-default text"><i class="fa fa-comments fa-2x mr-3" aria-hidden="true"></i> <span class="text-secondary">Chat</span> </a>
       
         </li>
         <li class="list-group-item d-flex justify-content-between align-items-center">
-            <a href="/friends" class="btn btn-default text"><i class="fa fa-users fa-2x mr-3" aria-hidden="true"></i> <span>Friends</span> </a>
+            <a href="/friends" class="btn btn-default text"><i class="fa fa-users fa-2x mr-3" aria-hidden="true"></i> <span class="text-secondary"> Friends</span> </a>
         <span class="badge  badge-secondary badge-pill">20 </span>
 
         </li>
         <li class="list-group-item d-flex justify-content-between align-items-center">
           <form  action="{{ route('logout') }}" method="POST" >
             @csrf
-          <button type="submit" class="btn btn-default text pl-3"><i class="fa fa-power-off  fa-2x mr-3" aria-hidden="true"></i>&ensp;<span>Logout</span> </button>
+          <button type="submit" class="btn btn-default text pl-3"><i class="fa fa-power-off  fa-2x mr-3" aria-hidden="true"></i>&ensp;<span class="text-secondary">Logout</span> </button>
         </form>   
         </li>   
               <br> <br> 

@@ -11,6 +11,11 @@
         
          <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
           <!-- Styles --> 
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
         <style>
            * {
      font-size: 18px;
@@ -24,7 +29,11 @@
     animation-duration: 3s;
     animation-fill-mode: forwards;
 }
-
+.appname {
+            color: rgb(209, 207, 211)!important;
+            border-left: 1px solid rgb(209, 197, 205);
+            padding-left: 4px;
+        }
 @keyframes heading {
     0% {
         top: -300px
@@ -48,6 +57,14 @@
         left: 0px;
     }
 }
+.color {
+            color: rgb(209, 207, 211)!important;
+        }
+        
+        .background {
+            background-color: indigo !important;
+            opacity: 80%;
+        }
 .btn {   
     position: relative;
     animation-name: btn;
@@ -141,11 +158,16 @@ p.lead{
     padding: 3rem 15px;
     
 }
- 
+.navbar,
+        .navbar-ul>li>a {
+            background-color: indigo !important;
+            color: whitesmoke !important;
+            opacity: 80%;
+        }
+        
  body { 
 	
-     background-color: white !important;
-     /* opacity:80%;   */
+   background-color:white !important;  
 }
 .img{
   background-image:url('https://tek2d.com/wp-content/uploads/2019/01/UI-UX.jpg');
@@ -156,6 +178,53 @@ p.lead{
         </style>
     </head>
     <body> 
+      <nav class="navbar navbar-expand-md  shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand m-auto" href="{{ url('/') }}">
+                <span class="Logo"><img src="{{ URL::to('images/loop1.png') }}" alt="" width="31px" height="30px"></span>
+                <span class="appname">DebugLibrary</span>
+            </a>
+           <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- Left Side Of Navbar -->
+                <ul class="navbar-nav mr-auto">
+
+                </ul>
+
+                <!-- Right Side Of Navbar -->
+                <ul class="navbar-nav ml-auto navbar-ul">
+                    <!-- Authentication Links -->
+                    @guest
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                    </li>
+                    @if (Route::has('register'))
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                    </li>
+                    @endif @else
+                    <li class="nav-item dropdown">
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="position: relative; padding-left: 50px" vpre>
+                            <img src="/uploads/avatars/{{Auth::user()->avatar}}" style="width:32px; height:32px; position:absolute; top:10px; left:10px; border-radius:50%">
+                            {{ Auth::user()->username }} <span class="caret"></span>
+                            </a>
+
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/dashboard">Profile</a>
+                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                        </div>
+                    </li>
+                    @endguest
+                </ul>
+            </div>
+        </div>
+    </nav>
       <main class="bd-masthead">
         <div class="container">
           <div class="row">

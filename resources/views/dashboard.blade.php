@@ -7,14 +7,14 @@
         <div class="col-md-8 col-sm-12 ">
             <h2 class="text-center  text">Dashboard <i class="fa fa-dashboard" aria-hidden="true"></i></h2>
             <hr>
-            <div class="container">
-                <div class="form p-5 shadow-lg px-0 mastercard ">
+            <div class="container-fluid">
+                <div class="form p-3 shadow-lg px-0 mastercard ">
                     <div class="content-center m-auto">
  
                           <div class="userd m-auto p-3">
-                          <a href="/uploads/avatars/{{Auth::user()->avatar}}">  <img src="/uploads/avatars/{{Auth::user()->avatar}}"  class="rounded-circle" style="width:220px;height:210px;border:5px solid silver"></a>
+                          <a href="/uploads/avatars/{{$profile->avatar}}">  <img src="/uploads/avatars/{{Auth::user()->avatar}}"  class="rounded-circle" style="width:220px;height:210px;border:5px solid silver"></a>
             @if (Auth::user()->id == $profile->id)                 
-     <a href="/userprofiler" ><a  data-toggle="modal" data-target="#camera"><i class="fa fa-camera" aria-hidden="true" ></a></i>
+     <a href="/userprofiler" ><a title="Upload Camera"  data-toggle="modal" data-target="#camera"><i class="fa fa-camera" aria-hidden="true" ></a></i>
                          @endif  
                             <div class="modal fade" id="camera" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-sm" role="document">
@@ -51,12 +51,12 @@
                     <h3 class="text-center text-secondary">  {{ Auth::user()->username }} <br>
                         {{ Auth::user()->email}}</h3>
      @if (Auth::user()->id == $profile->id)                 
-     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Edit profile</button>
+     <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal">Edit profile <i class="fa fa-pencil" aria-hidden="true"></i></button>
     @endif
     @if (Auth::user()->id != $profile->id)  
-     <a href="/addfriends/{{$profile->id}}"  class="btn bg-secondary color">Add User <i class="fa fa-user-plus" aria-hidden="true"></i></a>
+     <a href="/addfriends/{{$profile->id}}"  class="btn bg-secondary btn-sm color">Add User <i class="fa fa-user-plus" aria-hidden="true"></i></a>
  
-     <a href="/removefriends/{{$profile->id}}"  class="btn bg-secondary color">Remove User <i class="fa fa-trash" aria-hidden="true"></i></a>
+     <a href="/removefriends/{{$profile->id}}"  class="btn bg-secondary  btn-sm color">Remove User <i class="fa fa-trash" aria-hidden="true"></i></a>
      
      @endif
    
@@ -77,10 +77,10 @@
             <form action="/profileupdate" method="Post">
                 @csrf
                 @method('put')
-                <div class="row">
+                <div class="row text">
 
                     <div class="col-6 ">
-                        <div class="form-group">
+                        <div class="form-group ">
                             <label for="firstname" class="labs"><i class="fa fa-user" aria-hidden="true"></i> First name:</label>
                             <input type="text" maxlength="20" value="{{$profile->first_name}}" name="first_name" id="" class="form-control" placeholder="" value="">
 
@@ -96,7 +96,7 @@
 
                         </div>
                         <div class="form-group" >
-                            <label for="email" class="labs"><i class="fa fa-envelope-o" aria-hidden="true"></i>Add Another Email</label>
+                            <label for="email" class="labs"><i class="fa fa-envelope" aria-hidden="true"></i> Add Another Email</label>
                             <input type="text" name="email" id="" maxlength="50" value="{{$profile->email}}"  class="form-control" placeholder="" aria-describedby="helpId">
 
                         </div>
@@ -138,7 +138,7 @@
                     </div>
                 </div>
 
-                    <div class="row">
+                    <div class="row text">
                         <div class="col-xl-12">
                         <div class="form-group">
                             <label for="bio" class="labs"><i class="fa fa-address-book" aria-hidden="true"></i> Bio:</label>
@@ -149,7 +149,7 @@
 
 
                 <div class="text-right">
-                    <button type="submit" class="btn btn-secondary" >Update Profile</button> 
+                    <button type="submit" class="btn btn-secondary">Update Profile</button> 
                   </div>
                 </form>
 
@@ -165,87 +165,113 @@
 
   
 
-<div class="profileinfo "> 
-  <div class="row"> 
-    <div class="col-5 col-md-4 col-lg-3 ">
+<div class="profileinfo pl-5"> 
+     
+  {{-- <div class="row ">  --}}
+  <div class="row "> 
+    <div class="col-5 col-md-4 col-lg-3 border-right border-muted ">
         First name:
      </div>
-    <div class="col-7 col-md-8 col-lg-9 text-left">
-        {{ $profile->first_name ?? "First name" }}
+    <div class="col-7 col-md-8 col-lg-9 text-left ">
+        <span class="font-weight-bold text-secondary"> {{ $profile->first_name ?? "First name" }}</span>
     </div>
    </div>
   <div class="row ">
-    <div class="col-5 col-md-4 col-lg-3 ">
+    <div class="col-5 col-md-4 col-lg-3 border-right border-muted ">
         Last name:
      </div>
     <div class="col-7 col-md-8 col-lg-9 lext-left">
-        {{ $profile->last_name  ?? "Last name" }}
+        <span class="font-weight-bold text-secondary"> {{ $profile->last_name  ?? "Last name" }}</span>
     </div>
    </div>
   <div class="row ">
-    <div class="col-5 col-md-4 col-lg-3 ">
-        Phone number:
+    <div class="col-5 col-md-4 col-lg-3 border-right border-muted  ">
+        Phone :
      </div>
     <div class="col-7 col-md-8 col-lg-9 text-left">
-        {{ $profile->phone_number ?? "Phone number" }}
+        <span class="font-weight-bold text-secondary">{{ $profile->phone_number ?? "Phone number" }}</span>
     </div>
    </div>
   <div class="row ">
-    <div class="col-5 col-md-4 col-lg-3 ">
+    <div class="col-5 col-md-4 col-lg-3 border-right border-muted ">
         Email:
      </div>
     <div class="col-7 col-md-8 col-lg-9 lext-left">
-        {{ $profile->email ?? "Email" }}
+        <span class="font-weight-bold text-secondary"> {{ $profile->email ?? "Email" }}</span>
     </div>
    </div>
   <div class="row ">
-    <div class="col-5 col-md-4 col-lg-3 ">
+    <div class="col-5 col-md-4 col-lg-3 border-right border-muted ">
         Gender:
      </div>
     <div class="col-7 col-md-8 col-lg-9 text-left">
-        {{ $profile->gender ?? "Gender" }}
+        <span class="font-weight-bold text-secondary"> {{ $profile->gender ?? "Gender" }}</span>
     </div>
    </div>
   <div class="row ">
-    <div class="col-5 col-md-4 col-lg-3 ">
+    <div class="col-5 col-md-4 col-lg-3 border-right border-muted ">
         City:
      </div>
     <div class="col-7 col-md-8 col-lg-9 text-left">
-        {{ $profile->city ?? "City " }}
+        <span class="font-weight-bold text-secondary"> {{ $profile->city ?? "City " }}</span>
     </div>
    </div>
   <div class="row ">
-    <div class="col-5 col-md-4 col-lg-3">
-        Marital Status:
+    <div class="col-5 col-md-4 col-lg-3 border-right border-muted ">
+        MaritalStatus:
      </div>
     <div class="col-7 col-md-8 col-lg-9 text-left">
-        {{ $profile->marital_status ?? "" }}
+        <span class="font-weight-bold text-secondary">  {{ $profile->marital_status ?? "Complecated" }}</span>
     </div>
    </div>
   <div class="row ">
-    <div class="col-5 col-md-4 col-lg-3">
-        Field of expertise:
+    <div class="col-5 col-md-4 col-lg-3 border-right border-muted ">
+        SpecialistOn: 
      </div>
     <div class="col-7 col-md-8 col-lg-9 text-left">
-    {{ $profile->field_of_expertise ?? "field_of_expertise " }}
+        <span class="font-weight-bold text-secondary"> {{ $profile->field_of_expertise ?? "field_of_expertise " }}</span>
     </div>
    </div>
-  <div class="row ">
-    <div class="col-12  ">
+  <div class="row border rounded-lg border-muted pb-3 m-2">
+    <div class="col-12 ">
         Bio
      </div>
     <div class="col-12 pr-2">
-    {{ $profile->bio ?? "About ".Auth::user()->username }}
+    <span class="font-weight-bold text-secondary">{{ $profile->bio ?? "About ".Auth::user()->username }}</span>
     </div>
    </div>
 
 
 </div> 
-   </div>
-    </div>            
-                </div>
-            </div>
+
+<hr>
+<div><h4 class="font-weight-bold text">All Post By {{Auth::user()->username}}</h4></div>
+<div class="postarea"> 
+    <div class="card shadow-sm">
+        <div class="card-header">
+            <a href=""><img src="/uploads/avatars/{{Auth::user()->avatar}}"  class="rounded-circle " style="width:40px;height:38px;border:3px solid silver;"></a> <a class="text-secondary" href="/chat/">friends username</a> 
         </div>
+        <div class="card-body">
+            <h5 class="card-title">Title</h5>
+            <p class="card-text">Content</p>
+            <i style="font-size:12px;color:grey;" class="float-right">Posted 20 hours</i> 
+        </div>
+        <div class="card-footer text-center"> 
+            <a href="" class="btn i text-secondary"><span class="action">Comment</span> <i class="fa fa-commenting text" aria-hidden="true"><sub>20</sub></i></a>
+            <a href="" class="btn i text-secondary "><span class="action">Like</span> <i class="fa fa-thumbs-up text-primary" aria-hidden="true"><sub>20</sub></i></a>
+            <a href="" class="btn i text-secondary"><span class="action">Dislike</span> <i class="fa fa-thumbs-down  text-warning" aria-hidden="true"><sub>20</sub></i></a>
+        </div>
+    </div> 
+    <br>
+     
+
+
+
+
+   </div>
+ 
+
+   
     </div>
 </div>
 @endsection
@@ -289,6 +315,7 @@
     .profileinfo{
         font-size: 20px;
     }
+     
 </style>
          
 <script>
