@@ -8,7 +8,7 @@ class Profile extends Model
 {
     protected $fillable = [
         'first_name', 'last_name', 'phone_number', 'email', 'gender', 'city', 'marital_status', 'field_of_expertise', 'bio'
- 
+
     ];
 
     /**
@@ -21,6 +21,6 @@ class Profile extends Model
 
     public function forum()
     {
-        return $this->hasmany(forum::class);
+        return $this->hasmany(Forum::class);
     }
 }
