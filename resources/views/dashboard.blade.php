@@ -12,31 +12,25 @@
                     <div class="content-center m-auto">
 
                           <div class="userd m-auto p-3">
-                          <a href="/uploads/avatars/{{$friend->avatar}}">  <img src="/uploads/avatars/{{$friend->avatar}}"  class="rounded-circle" style="width:220px;height:210px;border:5px solid silver"></a>
+                          <a href="/uploads/avatars/{{$friend->avatar}}">  <img src="/uploads/avatars/{{$friend->avatar}}"  class="rounded-circle" style="width:210px;height:210px;border:5px solid silver"></a>
             @if (Auth::user()->id == $profile->id)
      <a href="/userprofiler" ><a title="Upload Camera"  data-toggle="modal" data-target="#camera"><i class="fa fa-camera" aria-hidden="true" ></a></i>
                          @endif
                             <div class="modal fade" id="camera" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-sm" role="document">
                                   <div class="modal-content">
-                                    <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Update Profile Picture</h5>
-                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                      </button>
-                                    </div>
                                     <div class="modal-body">
-                                                    <img src="/uploads/avatars/{{Auth::user()->avatar}}" id="output" style="width:150px; height:150px;  border-radius:50%; marging-right:25px;">
+                                                    <img src="/uploads/avatars/{{$friend->avatar}}" id="output" class="w-100" height="260vh">
                                                     <form action="/profilepicture" enctype="multipart/form-data"  method="post">
                                                         @csrf
                                                         <br>
                                                         <div class="row">
-                                                        <div class="col-12 m-auto">
-                                                            <input  accept="image/*" onchange="loadFile(event)" type="file" name="avatar" class="form-control"> <br>
+                                                        <div class="col-6 text-center">
+                                                            <input  accept="image/*" onchange="loadFile(event)" type="file" name="avatar" class="form-control">
                                                       </div>
-                                                        <div class="col-12 m-auto">
-                                                            <button type="submit" class="btn btn-sm btn-primary  float-right"><i class="fas fa-upload "></i>Upload</button>
-                                                        </div>
+                                                      <div class="col-6 text-center">
+                                                        <button type="submit" class="btn  btn-primary  float-right"><i class="fa fa-upload "></i> Upload</button>
+                                                    </div>
 
                                                         </div>
                                                            </div>
