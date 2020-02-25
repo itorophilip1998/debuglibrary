@@ -14,7 +14,7 @@ class HomeController extends Controller
     {
         $this->middleware('auth');
     }
-  
+
 
     /**
      * Show the application dashboard.
@@ -22,7 +22,16 @@ class HomeController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index()
-    { 
+    {
         return view('/home');
+    }
+
+
+
+    //
+    public function see()
+    {
+         $fri=User::all();
+        return view('chat',compact('fri'));
     }
 }

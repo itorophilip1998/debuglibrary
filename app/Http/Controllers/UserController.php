@@ -2,18 +2,27 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 use Image;
 use File;
 use Auth;
+use App\Http\Controllers\chat;
+
 class UserController extends Controller
-{ public function __construct()
+
+
+
+
+
+{
+    public function __construct()
     {
         $this->middleware('auth');
     }
     public function userprofiler(){
         $user=Auth::user();
-        return view('/dashboard', compact('user'));
+        return view('/dashboard', compact('users'));
     }
 
 
@@ -31,4 +40,12 @@ class UserController extends Controller
 
         return redirect('/dashboard');
     }
+
+//
+
+
+
+
+
+
 }

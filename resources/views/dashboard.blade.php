@@ -10,12 +10,12 @@
             <div class="container">
                 <div class="form p-5 shadow-lg px-0 mastercard ">
                     <div class="content-center m-auto">
- 
+
                           <div class="userd m-auto p-3">
                           <a href="/uploads/avatars/{{Auth::user()->avatar}}">  <img src="/uploads/avatars/{{Auth::user()->avatar}}"  class="rounded-circle" style="width:220px;height:210px;border:5px solid silver"></a>
-            @if (Auth::user()->id == $profile->id)                 
+            @if (Auth::user()->id == $profile->id)
      <a href="/userprofiler" ><a  data-toggle="modal" data-target="#camera"><i class="fa fa-camera" aria-hidden="true" ></a></i>
-                         @endif  
+                         @endif
                             <div class="modal fade" id="camera" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog modal-sm" role="document">
                                   <div class="modal-content">
@@ -25,10 +25,10 @@
                                         <span aria-hidden="true">&times;</span>
                                       </button>
                                     </div>
-                                    <div class="modal-body"> 
+                                    <div class="modal-body">
                                                     <img src="/uploads/avatars/{{Auth::user()->avatar}}" id="output" style="width:150px; height:150px;  border-radius:50%; marging-right:25px;">
                                                     <form action="/profilepicture" enctype="multipart/form-data"  method="post">
-                                                        @csrf 
+                                                        @csrf
                                                         <br>
                                                         <div class="row">
                                                         <div class="col-12 m-auto">
@@ -37,7 +37,7 @@
                                                         <div class="col-12 m-auto">
                                                             <button type="submit" class="btn btn-sm btn-primary  float-right"><i class="fas fa-upload "></i>Upload</button>
                                                         </div>
-                                               
+
                                                         </div>
                                                            </div>
                                                 </div>
@@ -45,25 +45,25 @@
                                        </div>
                     </div>
                     </div>
-                    
-                   
-               
+
+
+
                     <h3 class="text-center text-secondary">  {{ Auth::user()->username }} <br>
                         {{ Auth::user()->email}}</h3>
-     @if (Auth::user()->id == $profile->id)                 
+     @if (Auth::user()->id == $profile->id)
      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Edit profile</button>
     @endif
-    @if (Auth::user()->id != $profile->id)  
+    @if (Auth::user()->id != $profile->id)
      <a href="/addfriends/{{$profile->id}}"  class="btn bg-secondary color">Add User <i class="fa fa-user-plus" aria-hidden="true"></i></a>
- 
+
      <a href="/removefriends/{{$profile->id}}"  class="btn bg-secondary color">Remove User <i class="fa fa-trash" aria-hidden="true"></i></a>
-     
+
      @endif
-   
-          
-           
+
+
+
      <hr>
-  <!-- Modal -->  
+  <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
@@ -149,7 +149,7 @@
 
 
                 <div class="text-right">
-                    <button type="submit" class="btn btn-secondary" >Update Profile</button> 
+                    <button type="submit" class="btn btn-secondary" >Update Profile</button>
                   </div>
                 </form>
 
@@ -158,91 +158,91 @@
 
 
         </div>
-        
+
       </div>
     </div>
   </div>
 
-  
 
-<div class="profileinfo "> 
-  <div class="row"> 
-    <div class="col-5 col-md-4 col-lg-3 ">
+
+<div class="profileinfo ">
+  <div class="row">
+    <div class="col-5 col-md-4 col-lg-3 mt-2">
         First name:
      </div>
-    <div class="col-7 col-md-8 col-lg-9 text-left">
-        {{ $profile->first_name ?? "First name" }}
+    <div class="col-7 col-md-8 col-lg-9 text-left"> <input type="text" class="form-control col-6 mt-1" value=" {{ $profile->first_name ?? "First name" }}">
+
     </div>
    </div>
   <div class="row ">
-    <div class="col-5 col-md-4 col-lg-3 ">
+    <div class="col-5 col-md-4 col-lg-3 mt-2">
         Last name:
      </div>
-    <div class="col-7 col-md-8 col-lg-9 lext-left">
-        {{ $profile->last_name  ?? "Last name" }}
+    <div class="col-7 col-md-8 col-lg-9 lext-left"><input type="text" class="form-control col-6 mt-1" value=" {{ $profile->last_name  ?? "Last name" }}">
+
     </div>
    </div>
   <div class="row ">
-    <div class="col-5 col-md-4 col-lg-3 ">
+    <div class="col-5 col-md-4 col-lg-3 mt-2">
         Phone number:
      </div>
-    <div class="col-7 col-md-8 col-lg-9 text-left">
-        {{ $profile->phone_number ?? "Phone number" }}
+    <div class="col-7 col-md-8 col-lg-9 text-left"><input type="text" class="form-control col-6 mt-1" value=" {{ $profile->phone_number ?? "Phone number" }}">
+
     </div>
    </div>
   <div class="row ">
-    <div class="col-5 col-md-4 col-lg-3 ">
+    <div class="col-5 col-md-4 col-lg-3 mt-2">
         Email:
      </div>
-    <div class="col-7 col-md-8 col-lg-9 lext-left">
-        {{ $profile->email ?? "Email" }}
+    <div class="col-7 col-md-8 col-lg-9 lext-left"><input type="text" class="form-control col-6 mt-1" value="   {{ $profile->email ?? "Email" }}">
+
     </div>
    </div>
   <div class="row ">
-    <div class="col-5 col-md-4 col-lg-3 ">
+    <div class="col-5 col-md-4 col-lg-3 mt-2">
         Gender:
      </div>
-    <div class="col-7 col-md-8 col-lg-9 text-left">
-        {{ $profile->gender ?? "Gender" }}
+    <div class="col-7 col-md-8 col-lg-9 text-left"><input type="text" class="form-control col-6 mt-1" value="   {{ $profile->gender ?? "Gender" }}">
+
     </div>
    </div>
   <div class="row ">
-    <div class="col-5 col-md-4 col-lg-3 ">
+    <div class="col-5 col-md-4 col-lg-3 mt-2 ">
         City:
      </div>
-    <div class="col-7 col-md-8 col-lg-9 text-left">
-        {{ $profile->city ?? "City " }}
+    <div class="col-7 col-md-8 col-lg-9 text-left"><input type="text" class="form-control col-6 mt-1" value="  {{ $profile->city ?? "City " }}">
+
     </div>
    </div>
   <div class="row ">
-    <div class="col-5 col-md-4 col-lg-3">
+    <div class="col-5 col-md-4 col-lg-3 mt-2">
         Marital Status:
      </div>
-    <div class="col-7 col-md-8 col-lg-9 text-left">
-        {{ $profile->marital_status ?? "" }}
+    <div class="col-7 col-md-8 col-lg-9 text-left"><input type="text" class="form-control col-6 mt-1" value="    {{ $profile->marital_status ?? "" }}">
+
     </div>
    </div>
   <div class="row ">
-    <div class="col-5 col-md-4 col-lg-3">
+    <div class="col-5 col-md-4 col-lg-3 mt-2">
         Field of expertise:
      </div>
-    <div class="col-7 col-md-8 col-lg-9 text-left">
-    {{ $profile->field_of_expertise ?? "field_of_expertise " }}
+    <div class="col-7 col-md-8 col-lg-9 text-left"><input type="text" class="form-control col-6 mt-1" value="{{ $profile->field_of_expertise ?? "field_of_expertise " }}">
+
     </div>
-   </div>
+   </div> <br>
   <div class="row ">
     <div class="col-12  ">
         Bio
      </div>
-    <div class="col-12 pr-2">
-    {{ $profile->bio ?? "About ".Auth::user()->username }}
+    <div class="col-12 pr-2"><textarea class="form-control"name="" id="" cols="30" rows="5">{{ $profile->bio ?? "About ".Auth::user()->username }}</textarea>
+
     </div>
    </div>
 
 
-</div> 
+</div>
    </div>
-    </div>            
+    </div>
                 </div>
             </div>
         </div>
@@ -250,7 +250,7 @@
 </div>
 @endsection
 
-<style> 
+<style>
 
     .fa-camera{
         position: absolute;
@@ -290,7 +290,7 @@
         font-size: 20px;
     }
 </style>
-         
+
 <script>
     var loadFile = function(event) {
       var output = document.getElementById('output');

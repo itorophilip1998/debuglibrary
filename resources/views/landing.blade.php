@@ -8,9 +8,9 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
          <link rel="shortcut icon" href="{{URL::to('images/favicon.PNG')}}" type="image/x-icon">
-        
+
          <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-          <!-- Styles --> 
+          <!-- Styles -->
         <style>
            * {
      font-size: 18px;
@@ -21,7 +21,7 @@
     line-height: 1.3;
     position: relative;
     animation: heading;
-    animation-duration: 3s;
+    animation-duration: 4s;
     animation-fill-mode: forwards;
 }
 
@@ -48,7 +48,7 @@
         left: 0px;
     }
 }
-.btn {   
+.btn {
     position: relative;
     animation-name: btn;
     animation-duration: 10s;
@@ -66,7 +66,7 @@
 
     }
 }
- 
+
  /* Styling for the main section  */
  .allbtn {
     background-color: rgb(90, 14, 145) !important;
@@ -98,22 +98,22 @@ h1.bd-text-bright{
 .logbtn:hover{
   background-color: rgb(90, 14, 145) !important;
   color: whitesmoke !important;
-  
+
 }
 .btn.btn-light{
     color: indigo !important;
     border-color: whitesmoke !important;
     font-weight: 600;
     font-size: 1.25rem;
-    
+
 }
 
 .btn.btn-secondary{
     color: white !important;
-    
+
     font-weight: 600;
     font-size: 1.25rem;
-    
+
 }
 
 p.lead{
@@ -121,7 +121,7 @@ p.lead{
     margin: 0 0 16px !important;
     color: #212529;
     line-height: 1.5;
-    
+
 }
 
 .text-muted {
@@ -139,11 +139,11 @@ p.lead{
 .bd-masthead {
     position: relative;
     padding: 3rem 15px;
-    
+
 }
- 
- body { 
-	
+
+ body {
+
      background-color: white !important;
      /* opacity:80%;   */
 }
@@ -152,24 +152,24 @@ p.lead{
   background-size:cover !important;
   height:100vh !important;
 }
-             
+
         </style>
     </head>
-    <body> 
+    <body>
       <main class="bd-masthead">
         <div class="container">
           <div class="row">
-          
+
             <div class="col-md-6 text-center text-md-left " >
-              
-      <br> 
-      <br> 
+
+      <br>
+      <br>
             <div id="animation-header">
               <h1 class="mb-3 bd-text-bright ">DebugLibrary</h1>
             </div>
               <div id="animation-body">
                 <p class="lead">
-                  A community of people with like minds with the passion to provide solutions to challenges related to both harware and software.  
+                  A community of people with like minds with the passion to provide solutions to challenges related to both harware and software.
                 </p>
                 <p class="lead mb-4">
                   DebugLibrary is a platform for developers and people into ICT to collaborate and render tech-based solutions to problems that are tech inclined. Come and join this great community!
@@ -182,22 +182,22 @@ p.lead{
                 <div class="col-md px-2">
                   <a href=" {{route('login')}} " id="btn" class="btn btn-lg btn-outline-secondary rounded-pill logbtn w-100 mb-3 animationbtn-2" >Login</a>
                 </div>
-                
+
               </div>
               <p class="text-muted mb-0">
                 Currently v1.0.0
               </p>
-              
+
             </div>
             <div class="col-12 img col-md-6 pt-0 ">
-               
+
             </div>
-    
+
           </div>
         </div>
       </main>
-     
-    
+
+
 <script src="{{URL::to('js/script.js')}}"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
