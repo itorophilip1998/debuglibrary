@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Profile;
-use App\User;
 use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller
@@ -42,27 +41,6 @@ class ProfileController extends Controller
 
     public function userprofile($id){
         $profile = Profile::findorfail($id);
-<<<<<<< HEAD
-        return view('darshboard', compact('profile'));
-=======
         return view('dashboard', compact('profile'));
->>>>>>> 55ee4a6a6e8782ef6324021da8233bfcc97b16d0
     }
-//
-public function users()
-{
-    // $profile= User::all();
-    $profile = User::all();
-    return view('friends',compact('profile'));
-
-}
-
-
-
-
-
-
-
-
-
 }

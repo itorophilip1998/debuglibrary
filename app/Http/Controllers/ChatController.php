@@ -21,13 +21,5 @@ class ChatController extends Controller
          $friends=User::all();
         return view('chat',compact('friends'));
     }
-<<<<<<< HEAD
-//
-
-
-
-
-=======
->>>>>>> 55ee4a6a6e8782ef6324021da8233bfcc97b16d0
 
 }
