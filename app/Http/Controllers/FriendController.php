@@ -13,10 +13,17 @@ class FriendController extends Controller
         $this->middleware('auth');
     }
 
+<<<<<<< HEAD
     // public function friends()
     // {
     //     return view('/friends');
     // }
+=======
+    public function friends()
+    {
+        return view('/friends');
+    }
+>>>>>>> 55ee4a6a6e8782ef6324021da8233bfcc97b16d0
     public function removefriends($id)
     {
        $frindsdetails=DB::table('friends')->where('friend_id',$id)->delete();

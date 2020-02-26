@@ -42,7 +42,11 @@ class ProfileController extends Controller
 
     public function userprofile($id){
         $profile = Profile::findorfail($id);
+<<<<<<< HEAD
         return view('darshboard', compact('profile'));
+=======
+        return view('dashboard', compact('profile'));
+>>>>>>> 55ee4a6a6e8782ef6324021da8233bfcc97b16d0
     }
 //
 public function users()
