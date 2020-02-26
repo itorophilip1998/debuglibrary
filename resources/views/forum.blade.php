@@ -31,7 +31,7 @@
       <div class="modal-body">
       <h5 class="modal-title" id="exampleModalLabel">Comment</h5>
       <textarea placeholder="Enter Comment" class="form-control" name="message"></textarea>
- 
+
 
       </div>
       <div class="modal-footer">
@@ -43,10 +43,10 @@
 </div>
                 <i class="fa text-allbtn   fa-2x  fa-eye-slash" aria-hidden="true">  No post found.... </i>
 
-                
+
                 <!-- modal group -->
                 <!-- <div class="modal" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog" role="document">z
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title"> title</h5>
@@ -57,7 +57,7 @@
 
        <div class="modal-body">
         <p>Modal body text goes hree.</p>
-      </div> 
+      </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary">Submit</button>
       </div>
@@ -78,20 +78,20 @@
           <h6 class="float-right allbtn ">Posted by <a href="" class="allbtn"> <i class="fa fa-user-circle-o" aria-hidden="true"></i></a></h6>
             </div>
             <br>
-            <div class="commentbox text-center rounded-pill mt-3" style="border:1px solid lightgrey;">  
-              <a href="/allcomment/{{$post->id}}" style="font-size:18px;text-decoration:none"  class="allbtn" ><i class="fa fa-comment allbtn" aria-hidden="true">Comment </i><sup>222</sup> </a> 
-              <a href="" style="font-size:18px;text-decoration:none" class="allbtn"> <i class="fa fa-thumbs-up allbtn" aria-hidden="true"></i> Like</i><sup>1220</sup></a> 
+            <div class="commentbox text-center rounded-pill mt-3" style="border:1px solid lightgrey;">
+              <a href="/allcomment/{{$post->id}}" style="font-size:18px;text-decoration:none"  class="allbtn" ><i class="fa fa-comment allbtn" aria-hidden="true">Comment </i><sup>222</sup> </a>
+              <a href="" style="font-size:18px;text-decoration:none" class="allbtn"> <i class="fa fa-thumbs-up allbtn" aria-hidden="true"></i> Like</i><sup>1220</sup></a>
             </div>
        </div>
 
 
        @endforeach
-             
-          @else 
+
+          @else
           <div class="post">
           </div>
-          @endif  
-    
+          @endif
+
 
 
 
