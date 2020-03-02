@@ -15,13 +15,13 @@ class ProfileController extends Controller
     }
 
     public function profileupdate(Request $request)
-    {  
-        // $this->validate($request,[  
+    {
+        // $this->validate($request,[
         //     'phone_number'=>'int|min:11|max:15',
         //     'email'=>'email|min:10|max:50',
-        //     'gender'=>'string', 
+        //     'gender'=>'string',
         //     'description'=>'max:160'
-        // ]); 
+        // ]);
          $id= Auth::user()->id;
         $profile = Profile::findorfail($id);
         $profile->first_name = $request->first_name;
@@ -40,7 +40,7 @@ class ProfileController extends Controller
     }
 
     public function userprofile($id){
-        $profile = Profile::findorfail($id); 
-        return view('darshboard', compact('profile'));
+        $profile = Profile::findorfail($id);
+        return view('dashboard', compact('profile'));
     }
 }

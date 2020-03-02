@@ -16,19 +16,19 @@ class FriendController extends Controller
     public function friends()
     {
         return view('/friends');
-    } 
+    }
     public function removefriends($id)
-    { 
+    {
        $frindsdetails=DB::table('friends')->where('friend_id',$id)->delete();
        return redirect()->back();
 
     }
     public function addfriends($id)
     {
-       $frindsdetails=new Friend();  
-       $frindsdetails->friend_id=$id; 
+       $frindsdetails=new Friend();
+       $frindsdetails->friend_id=$id;
        $frindsdetails->user_id= auth()->user()->id;
-       $frindsdetails->save();  
+       $frindsdetails->save();
        return redirect()->back();
 
     }

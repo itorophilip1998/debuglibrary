@@ -1,14 +1,17 @@
 
-   <ul class="mobile-view m-auto col-11">
-   <li> <a href="/dashboard" class="btn btn-default text"><i class="fa fa-dashboard " aria-hidden="true"></i></a></li>
-   <li> <a href="/forum" class="btn btn-default text"> <i class="fa fa-tv " aria-hidden="true"></i></a></li>
+   <ul class="mobile-view m-auto col-12 ">
+   <li> <a href="/home" class="btn btn-default text  "><i class="fa fa-home " aria-hidden="true"></i></a></li>
+   <li> <a href="/dashboard" class="btn btn-default text  "><i class="fa fa-dashboard " aria-hidden="true"></i></a></li>
+   <li> <a href="/forum" class="btn btn-default text "> <i class="fa fa-tv " aria-hidden="true"></i></a></li>
    <li> <a href="/chat" class="btn btn-default text"> <i class="fa fa-comments " aria-hidden="true"></i> </a></li>
-   <li> <a href="/friends" class="btn btn-default text"> <i class="fa fa-users" aria-hidden="true"></i></a></li>
-
+   <li> <a href="/friends" class="btn btn-default text "> <i class="fa fa-users" aria-hidden="true"></i></a></li>
+<br>
   </ul>
  <div class="col-md-4 col-lg-3 col-sm-5">
-
     <ul class="list-group shadow-lg desktop-view " style="position:fixed;">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+       <a href="/home" class="btn btn-default text"><i class="fa fa-home fa-2x mr-3" aria-hidden="true"></i><span class="text-secondary">Home</span> </a>
+         </li>
         <li class="list-group-item d-flex justify-content-between align-items-center">
        <a href="/dashboard" class="btn btn-default text"><i class="fa fa-dashboard fa-2x mr-3" aria-hidden="true"></i><span class="text-secondary">Dashboard</span> </a>
         <span class="badge badge-secondary badge-pill">1</span>
@@ -59,8 +62,7 @@
                  display: inline-block;
                  list-style: none;
                  padding-left: 20px;
-
-
+                 width: 80px;
                }
                .mobile-view >li>a>i
                {
@@ -68,21 +70,23 @@
                 }
                 ul
                 .mobile-view >li a:hover,.mobile-view >li a:focus,.mobile-view >li a:active{
-                   color:whitesmoke !important;
-                   border-radius: 10px;
-                   background-color:indigo;
+                   color:grey !important;
+                   border-bottom:2px solid grey ;
                    opacity: 80%;
                    text-align: center;
                    width: 100px;
+                }
+                .mobile-view >li>a:focus{
+                    color:grey !important;
+                   border-bottom:2px solid grey ;
                 }
                 .mobile-view >li .a{
                 border-right: 1px solid lightgrey;
 
                 }
               .mobile-view{
-                 border-bottom: 1px solid lightgrey;
-                 border: 1px solid lightgrey;
-                 border-radius: 10px;
+                 border-bottom: 4px solid lightgrey;
+                 border-radius: 5px;
                  text-align: center;
 
 
